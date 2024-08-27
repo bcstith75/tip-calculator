@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.placeholder-right::placeholder {
+  text-align: right;
+}
+
+.error {
+  position: relative;
+  animation: shake .1s linear;
+  animation-iteration-count: 3;
+  border: 1px solid red;
+  outline: none;
+}

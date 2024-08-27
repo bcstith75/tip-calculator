@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tip Calculator</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+<body class="bg-lightGrayishCyan">
+
+
+  <main class="flex items-center justify-center lg:h-screen">
+
+    <div class="bg-white p-8 rounded-2xl w-[950px] flex flex-col md:flex-row space-x-8">
+
+      <!--Left Column-->
+      <div class="flex flex-col space-y-4">
+        <h1 class="text-sm font-semibold text-darkGrayishCyan">Bill</h1>
+
+
+        <div class="flex items-center relative w-[100%]">
+          <img src="images/icon-dollar.svg" class="absolute pl-4">
+
+          <input type="number" id="bill" placeholder="0" min="1" max="5" class="bg-veryLightGrayishCyan flex-1 text-right p-4 rounded-lg placeholder-right" width="100%" value="0">
+        </div>
+
+
+
+        
+
+        <h1 class="text-md font-semibold text-darkGrayishCyan">Select Tip %</h1>
+ 
+        <div class="grid gap-4 grid-cols-2 md:grid-cols-3 grid-rows-2">
+          <button class="text-2xl font-bold text-white bg-veryDarkCyan py-2 px-6 rounded-lg" id="5per">5%</button>
+          <button class="text-2xl font-bold text-white bg-veryDarkCyan py-2 px-6 rounded-lg" id="10per">10%</button>
+          <button class="text-2xl font-bold text-white bg-veryDarkCyan py-2 px-6 rounded-lg" id="15per">15%</button>
+          <button class="text-2xl font-bold text-white bg-veryDarkCyan py-2 px-6 rounded-lg" id="25per">25%</button>
+          <button class="text-2xl font-bold text-white bg-veryDarkCyan py-2 px-6 rounded-lg" id="50per">50%</button>
+          <button class="text-2xl font-bold text-veryDarkCyan bg-veryLightGrayishCyan py-2 px-6 rounded-lg" id="custom">Custom</button>
+        </div>
+
+        <h1 class="text-md font-semibold text-darkGrayishCyan">Number of People</h1>
+
+        <div class="flex items-center relative w-[100%]">
+          <img src="images/icon-person.svg" class="absolute pl-4">
+
+          <input type="number" id="peopleAmt" placeholder="0" min="1" max="5" class="bg-veryLightGrayishCyan flex-1 text-right p-4 rounded-lg placeholder-right" width="100%" value="0">
+        </div>
+
+     
+
+      </div>
+
+      <!--Right Column-->
+      <div class="flex flex-1 justify-end">
+        <div class="bg-veryDarkCyan rounded-xl p-6 w-[430px]">
+
+          <div class="py-6 flex justify-between">
+            <div class="flex flex-col">
+              <span class="text-white font-bold text-md">Tip Amount</span>
+              <span class="text-darkGrayishCyan font-bold text-md">/person</span>
+            </div>
+            <div class="text-4xl text-strongCyan font-bold" id="tipAmt">$0.00</div>
+          </div>
+
+          <div class="py-6 flex justify-between">
+            <div class="flex flex-col">
+              <span class="text-white font-bold text-md">Total</span>
+              <span class="text-darkGrayishCyan font-bold text-md">/person</span>
+            </div>
+            <div class="text-4xl text-strongCyan font-bold" id="totalAmt">$0.00</div>
+          </div>
+
+          <button class="text-xl font-bold text-darkGrayishCyan py-4 px-8 rounded-lg bg-strongCyan w-full text-center mt-24 uppercase" id="reset">Reset</button>
+
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
